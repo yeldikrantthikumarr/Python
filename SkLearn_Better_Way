@@ -103,9 +103,13 @@ pipe = Pipeline([
         ('svr', SVR()),
  ])
  
- pipe.fit(X_train, y_train)
- pipe.score(X_test, y_test)
+pipe.fit(X_train, y_train)
+pipe.score(X_test, y_test)
 
+pipe.steps
+pipe.get_params()
+pipe.set_params(svr__C=0.9)
 
+ 
 
 
