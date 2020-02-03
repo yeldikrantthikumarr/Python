@@ -85,8 +85,12 @@ pca.fit(boston['data'])
 Xp = pca.transform(boston['data'])
 Xp.shape() # output is 5
 
+clf = RandomForestRegressor()
+Xp_train, Xp_test, yp_train, yp_test = train_test_split(Xp, boston['target'],test_size =0.3)
+clf.fit(Xp_train, yp_train)
+clf.score(Xp_test, yp_test)
 
-
+#Exploring Pipelines .....
 
 
 
