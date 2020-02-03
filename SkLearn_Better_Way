@@ -90,7 +90,22 @@ Xp_train, Xp_test, yp_train, yp_test = train_test_split(Xp, boston['target'],tes
 clf.fit(Xp_train, yp_train)
 clf.score(Xp_test, yp_test)
 
-#Exploring Pipelines .....
+#Exploring Pipelines .....Grouping several steps
+# To scale data, reduce number of dimensions, and then use SVR
+#Lets used standard scalar
+
+from sklearn.preprocessing import StandardScalar
+from sklearn.pipeline import Pipeline
+
+pipe = Pipeline([
+        ('scale', StandardScaler()),
+        ('pca', PCA(n_components=5),
+        ('svr', SVR()),
+ ])
+ 
+ pipe.fit(X_train, y_train)
+ pipe.score(X_test, y_test)
+
 
 
 
