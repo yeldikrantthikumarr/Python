@@ -1,0 +1,26 @@
+# Learning  Scikit-learn better way
+#These are my practice codes, sourced, collected from various sources (group discussion, meetups, presentations, knowledge sharing platforms, ideas sharing, brain storming sessions, and explored via self-practices)
+
+
+import sklearn
+from sklearn import datasets
+boston = datasets.load_boston()
+type(boston)
+boston.feature_names
+boston['data']
+
+type(boston['data'])
+from sklearn.ensemble import RandomForestRegressor
+clf = RandomForestRegressor()
+clf.fit(boston['data'], boston['target'])
+clf.score(boston['data'],boston['target'])
+clf.score? # the "_" (underscore) variables are learned variables in sklearn
+dir(clf)
+clf.n_features_
+boston['data'].shape
+row = boston['data'][17]
+row.shape
+row.reshape(-1,13)
+clf.predict(row.reshape(-1,13))
+boston['target'][17]
+
