@@ -69,7 +69,21 @@ df.max(axis =0)
 Xstrain,Xstest, ytrain,ytest = train_test_split(Xs, boston['target'], test_size = 0.3)
 #remember when you specify test_size = 0.3 means 30 %. This parameter decides how much % the data has tobe divided. in this case it is 30% test data and the rest is train data
 
+clf = SVR()
+clf.fit(Xs_train, ys_train)
+clf.score(Xs_test, ys_test)
+####################################################################################################################################################################################################################################
 
+#if you are worried about reducing features in the data set, the most popular technique is "dimensionality reduction" (Dimensional reduction)
+# one of the known algorithm is PCA (Principal Component Analysis)
+
+
+from sklearn. decomposition import PCA
+pca = PCA(n_components=5)
+pca.fit(boston['data'])
+
+Xp = pca.transform(boston['data'])
+Xp.shape() # output is 5
 
 
 
