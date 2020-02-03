@@ -28,5 +28,8 @@ boston['target'][17]
 # In real world, the developed model has to predict on new data. The underlying risk exisits named as "Overfitting"
 
 # OVerfitting: - In simpler terms, the model is accurate on existing data but fails on new data
-
+# Lets understand common practices in model development:
+# Firstly, split the data into training data and test data
+# Once the model is built, use test data to evaluate  the model.
+# Through this Sklearn the process is very easy
 
