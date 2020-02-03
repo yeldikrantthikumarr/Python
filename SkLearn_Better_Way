@@ -46,6 +46,23 @@ clf.fit(X_train,y_train)
 clf.score(X_test, y_test)
 # output was 0.8205688983225575  ...i.e 82% accuracy
 
+################################################################################################################################################
+# Pre-processing data
+# some algorithms are more sensitive to range of feature values
+import pandas as pd
+df = pd.DataFrame(boston['data'], columns = boston['feature_names'])
+df.max(axis = 0) # axis=0 ...gives rows data
+
+from sklearn.svm import SVR
+clf = SVR()
+clf.fit(X_train, y_train)
+clf.score(X_test, y_test)
+
+# scaling all parameters on same scale !!
+
+
+
+
 
 
 
