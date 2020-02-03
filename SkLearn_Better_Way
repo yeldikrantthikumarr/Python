@@ -33,3 +33,5 @@ boston['target'][17]
 # Once the model is built, use test data to evaluate  the model.
 # Through this Sklearn the process is very easy
 
+################################################################################################################################################
+#Remeber: to split data there are many ways to do it other than X_train,X_test,y_train,y_test ..eg: k-fold
