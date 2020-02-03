@@ -23,4 +23,10 @@ row.shape
 row.reshape(-1,13)
 clf.predict(row.reshape(-1,13))
 boston['target'][17]
+################################################################################################################################################
+
+# In real world, the developed model has to predict on new data. The underlying risk exisits named as "Overfitting"
+
+# OVerfitting: - In simpler terms, the model is accurate on existing data but fails on new data
+
 
