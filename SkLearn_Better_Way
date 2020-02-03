@@ -60,6 +60,15 @@ clf.score(X_test, y_test)
 
 # scaling all parameters on same scale !!
 
+from sklearn import preprocessing
+Xs = preprocessing.scale(boston['data'])
+df = pd.DataFrame(Xs, columns = boston['feature_names'])
+df.max(axis =0)
+# there is no much data after preprocessing/ scaling the data
+
+Xstrain,Xstest, ytrain,ytest = train_test_split(Xs, boston['target'], test_size = 0.3)
+#remember when you specify test_size = 0.3 means 30 %. This parameter decides how much % the data has tobe divided. in this case it is 30% test data and the rest is train data
+
 
 
 
